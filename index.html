@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temprature converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h2>Accurate Temprature Converter</h2>
+
+    <div class="container">
+        <p id="howtouse">Enter a number in degrees, select the "From" and "To" temperature scales, and the converted result will appear in the output field automatically.</p>
+
+        <div>
+            <label for="temp-input">Temperature</label>
+            <!-- Input -->
+            <input type="number" id="temp-input" placeholder="Enter degrees" oninput="convertTemperature()">
+            <!-- Output -->
+            <input type="number" id="converted-temp" placeholder="Converted Temperature" readonly>
+
+        </div>
+
+        <div class="converter-sections">
+            <div class="section">
+                <strong>From</strong>
+                <div id="from-units">
+                    <span class="unit-option" onclick="selectUnit(this, 'from')">Celsius (°C)</span>
+                    <span class="unit-option" onclick="selectUnit(this, 'from')">Fahrenheit (°F)</span>
+                    <span class="unit-option" onclick="selectUnit(this, 'from')">Kelvin (K)</span>
+                    <span class="unit-option" onclick="selectUnit(this, 'from')">Rankine (°R)</span>
+                </div>
+            </div>
+
+            <div class="section">
+                <strong>To</strong>
+                <div id="to-units">
+                    <span class="unit-option" onclick="selectUnit(this, 'to')">Celsius (°C)</span>
+                    <span class="unit-option" onclick="selectUnit(this, 'to')">Fahrenheit (°F)</span>
+                    <span class="unit-option" onclick="selectUnit(this, 'to')">Kelvin (K)</span>
+                    <span class="unit-option" onclick="selectUnit(this, 'to')">Rankine (°R)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="button-wrapper">
+            <button onclick="clearFields()">Clear</button>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
